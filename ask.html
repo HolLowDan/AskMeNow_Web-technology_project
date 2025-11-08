@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ask a Question</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Левый блок: название сайта -->
+            <div class="header-logo">
+                <h1 class="site-title">AskMeNow</h1>
+            </div>
+
+            <!-- Центральный блок: поиск -->
+            <div class="header-search">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+
+            <!-- Правый блок: пользователь -->
+            <div class="header-user">
+                <button class="ask-button">Ask!</button>
+                
+                <!-- Вариант для АВТОРИЗОВАННОГО пользователя -->
+                <div class="user-profile auth-version">
+                    <img src="static/images/Avatar.svg" alt="User Avatar" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">Darth Vader</span>
+                        <div class="user-links">
+                            <a href="settings.html" class="user-link">Settings</a>
+                            <a href="#" class="user-link">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Вариант для НЕАВТОРИЗОВАННОГО пользователя 
+                <div class="auth-buttons guest-version">
+                    <a href="login.html" class="btn-login">Log in</a>
+                    <a href="signup.html" class="btn-signup">Sign up</a>
+                </div>
+                -->
+            </div>
+        </div>
+    </header>
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Левая колонка (основной контент) -->
+            <div class="content-left">
+                <h2>Ask a Question</h2>
+                
+                <form class="ask-form">
+                    <!-- Поле заголовка -->
+                    <div class="form-group">
+                        <label for="title">Title</label>
+                        <input type="text" id="title" name="title" class="form-input" 
+                            placeholder="Enter your question title..." maxlength="100">
+                        <div class="error-message">Title must be at least 10 characters.</div>
+                    </div>
+
+                    <!-- Поле текста вопроса -->
+                    <div class="form-group">
+                        <label for="text">Text</label>
+                        <textarea id="text" name="text" class="form-textarea" 
+                                placeholder="Enter the details of your question..." maxlength="1000"></textarea>
+                        <div class="error-message">Question text is required.</div>
+                    </div>
+
+                    <!-- Поле тегов -->
+                    <div class="form-group">
+                        <label for="tags">Tags</label>
+                        <input type="text" id="tags" name="tags" class="form-input" 
+                            placeholder="e.g. javascript, css, html" maxlength="50">
+                        <div class="help-text">Add up to 5 tags to describe what your question is about.</div>
+                        <div class="error-message">Please add at least one tag.</div>
+                    </div>
+
+                    <button type="submit" class="submit-btn">Ask Question</button>
+                </form>
+            </div>
+            <!-- Правая колонка (сайдбар) -->
+            <div class="content-sidebar">
+                <!-- Блок популярных тегов -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">Popular Tags</h3>
+                    <div class="tags-container">
+                        <a href="#" class="tag tag-xl">JavaScript</a>
+                        <a href="#" class="tag tag-l">Python</a>
+                        <a href="#" class="tag tag-l">Java</a>
+                        <a href="#" class="tag tag-m">HTML</a>
+                        <a href="#" class="tag tag-m">CSS</a>
+                        <a href="#" class="tag tag-m">React</a>
+                        <a href="#" class="tag tag-m">Node.js</a>
+                        <a href="#" class="tag tag-s">Vue</a>
+                        <a href="#" class="tag tag-s">Angular</a>
+                        <a href="#" class="tag tag-s">TypeScript</a>
+                        <a href="#" class="tag tag-s">PHP</a>
+                        <a href="#" class="tag tag-xs">Ruby</a>
+                        <a href="#" class="tag tag-xs">Go</a>
+                        <a href="#" class="tag tag-xs">Rust</a>
+                        <a href="#" class="tag tag-xs">Swift</a>
+                        <a href="#" class="tag tag-xs">Kotlin</a>
+                        <a href="#" class="tag tag-xs">C++</a>
+                        <a href="#" class="tag tag-xs">C#</a>
+                        <a href="#" class="tag tag-xs">Scala</a>
+                        <a href="#" class="tag tag-xs">SQL</a>
+                    </div>
+                </div>
+
+                <!-- Блок лучших участников -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">Best Members</h3>
+                    <div class="members-list">
+                        <a href="#" class="member-link">Linus Torvalds</a>
+                        <a href="#" class="member-link">Guido van Rossum</a>
+                        <a href="#" class="member-link">Brendan Eich</a>
+                        <a href="#" class="member-link">Grace Hopper</a>
+                        <a href="#" class="member-link">Tim Berners-Lee</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-content">
+            Danil Abdullin 2025
+        </div>
+    </footer>
+</body>
+</html>

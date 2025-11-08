@@ -1,0 +1,1130 @@
+/* БАЗОВЫЕ СТИЛИ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* ШАПКА САЙТА */
+.main-header {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.header-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Левый блок: логотип */
+.header-logo {
+    flex-shrink: 0;
+}
+
+.site-title {
+    color: #12994d;
+    font-size: 1.8rem;
+    font-weight: bold;
+}
+
+/* Центральный блок: поиск */
+.header-search {
+    flex: 1;
+    max-width: 600px;
+    min-width: 200px;
+}
+
+.search-form {
+    display: flex;
+    width: 100%;
+}
+
+.search-input {
+    flex: 1;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px 0 0 4px;
+    font-size: 1rem;
+    max-width: 500px;
+}
+
+.search-button {
+    padding: 8px 16px;
+    background-color: #12994d;
+    color: white;
+    border: 1px solid #12994d;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.search-button:hover {
+    background-color: #118443;
+}
+
+/* Правый блок: пользователь */
+.header-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-shrink: 0;
+}
+
+.ask-button {
+    padding: 8px 16px;
+    background-color: #0a95ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.ask-button:hover {
+    background-color: #0074cc;
+}
+
+/* Блок профиля пользователя */
+.user-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-size: 0.9rem;
+    color: #555;
+    margin-bottom: 2px;
+}
+
+.user-links {
+    display: flex;
+    gap: 10px;
+}
+
+.user-link {
+    font-size: 0.7rem;
+    color: #0074cc;
+    text-decoration: none;
+}
+
+.user-link:hover {
+    text-decoration: underline;
+}
+
+/* ОСНОВНОЙ КОНТЕНТ */
+.main-content {
+    padding: 20px 0;
+}
+
+.content-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 30px;
+}
+
+/* Левая колонка (основной контент) */
+.content-left {
+    flex: 1;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.content-left h2 {
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+/* Правая колонка (сайдбар) */
+.content-sidebar {
+    width: 300px;
+    flex-shrink: 0;
+}
+
+/* Блоки сайдбара */
+.sidebar-block {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 20px;
+}
+
+.sidebar-title {
+    color: #333;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #eee;
+}
+
+/* Стили для тегов */
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tag {
+    display: inline-block;
+    text-decoration: none;
+    color: #39739d;
+    background-color: #e1ecf4;
+    border: 1px solid #e1ecf4;
+    padding: 4px 8px;
+    border-radius: 3px;
+    transition: all 0.2s ease;
+}
+
+.tag:hover {
+    background-color: #d1e5f1;
+    color: #2c5777;
+}
+
+/* Разные размеры тегов */
+.tag-xl { 
+    font-size: 1.3rem; 
+    padding: 6px 12px; 
+}
+.tag-l { 
+    font-size: 1.1rem; 
+    padding: 5px 10px; 
+}
+.tag-m { 
+    font-size: 0.95rem; 
+    padding: 4px 8px; 
+}
+.tag-s { 
+    font-size: 0.85rem; 
+    padding: 3px 6px; 
+}
+.tag-xs { 
+    font-size: 0.75rem; 
+    padding: 2px 4px; 
+}
+
+/* Стили для списка участников */
+.members-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.member-link {
+    color: #0074cc;
+    text-decoration: none;
+    padding: 5px 0;
+    transition: color 0.2s ease;
+}
+
+.member-link:hover {
+    color: #005999;
+    text-decoration: underline;
+}
+
+/* ФУТЕР */
+.site-footer {
+    background: linear-gradient(to bottom, #2c3e50, #48525c);
+    color: white;
+    padding: 25px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.footer-content {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 1rem;
+}
+
+/* Стили для кнопок входа/регистрации */
+.auth-buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-login {
+    padding: 6px 12px;
+    color: #0074cc;
+    text-decoration: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.btn-login:hover {
+    background-color: #f8f9fa;
+}
+
+.btn-signup {
+    padding: 6px 12px;
+    background-color: #0a95ff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.btn-signup:hover {
+    background-color: #0074cc;
+}
+
+/* СПИСОК ВОПРОСОВ */
+/* Заголовок и фильтр */
+.questions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.questions-title-section {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.hot-filter {
+    color: #0074cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.hot-filter:hover {
+    text-decoration: underline;
+}
+
+/* Карточка вопроса */
+.question-item {
+    display: flex;
+    padding: 20px;
+    border-bottom: 1px solid #e1e5e9;
+    gap: 20px;
+}
+
+.question-item:hover {
+    background-color: #f8f9fa;
+}
+
+/* Статистика вопроса */
+.question-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 80px;
+    flex-shrink: 0;
+}
+
+.votes, .answers, .views {
+    text-align: center;
+    padding: 5px 8px;
+    border-radius: 4px;
+}
+
+.votes .count, .views .count {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #6a737c;
+}
+
+.answers .count {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.votes .label, .answers .label, .views .label {
+    font-size: 0.8rem;
+    color: #6a737c;
+}
+
+/* Стили для ответов */
+.answers {
+    border: 1px solid #e1e5e9;
+}
+
+.answers.accepted {
+    border-color: #12994d;
+    background-color: #12994d;
+}
+
+.answers.accepted .count,
+.answers.accepted .label {
+    color: white;
+}
+
+/* Контент вопроса */
+.question-content {
+    flex: 1;
+}
+
+.question-title {
+    margin: 0 0 10px 0;
+    font-size: 1.2rem;
+}
+
+.question-title a {
+    color: #0074cc;
+    text-decoration: none;
+}
+
+.question-title a:hover {
+    color: #0a95ff;
+}
+
+.question-excerpt {
+    color: #3c4146;
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Мета-информация вопроса */
+.question-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.question-tags {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.question-author {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: #6a737c;
+}
+
+.author-avatar {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: 1px solid #ccc;
+}
+
+.author-name {
+    color: #0074cc;
+}
+
+.question-date {
+    color: #6a737c;
+}
+
+/* Пагинация */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    margin-top: 40px;
+    padding: 20px 0;
+}
+
+.page-link {
+    padding: 8px 12px;
+    border: 1px solid #d6d9dc;
+    border-radius: 4px;
+    color: #3c4146;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.page-link:hover {
+    background-color: #f8f9fa;
+    border-color: #babfc4;
+}
+
+.page-link.active {
+    background-color: #0074cc;
+    border-color: #0074cc;
+    color: white;
+}
+
+.page-link.prev,
+.page-link.next {
+    font-weight: bold;
+}
+
+.page-link.dots {
+    border: none;
+    color: #6a737c;
+}
+
+.page-link.dots:hover {
+    background-color: transparent;
+}
+
+/* СТРАНИЦА ВОПРОСА */
+
+.question-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.question-header h1 {
+    margin: 0;
+    color: #333;
+    font-size: 1.8rem;
+    line-height: 1.3;
+    flex: 1;
+    margin-right: 20px;
+}
+
+.question-detail {
+    margin-bottom: 40px;
+}
+
+.question-main {
+    display: flex;
+    gap: 20px;
+}
+
+.vote-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 60px;
+    flex-shrink: 0;
+}
+
+.vote-btn {
+    background: none;
+    border: 1px solid #d6d9dc;
+    border-radius: 4px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    color: #6a737c;
+    transition: all 0.2s ease;
+}
+
+.vote-btn:hover {
+    background-color: #f8f9fa;
+    color: #3c4146;
+}
+
+.vote-count {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6a737c;
+}
+
+.accepted-check {
+    color: #12994d;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.question-content {
+    flex: 1;
+}
+
+.question-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.question-text p {
+    margin-bottom: 15px;
+}
+
+.question-text ul {
+    margin-bottom: 15px;
+    padding-left: 30px;
+}
+
+.question-text li {
+    margin-bottom: 8px;
+}
+
+.question-tags {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.question-meta {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #e1e5e9;
+}
+
+.author-info {
+    text-align: right;
+}
+
+.asked-time, .answered-time {
+    color: #6a737c;
+    font-size: 0.8rem;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.author-details {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.author-name {
+    color: #0074cc;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.answers-header {
+    margin: 40px 0 20px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.answers-header h2 {
+    margin: 0;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+.answers-list {
+    margin-bottom: 30px;
+}
+
+.answer-item {
+    display: flex;
+    gap: 20px;
+    padding: 25px 0;
+    border-bottom: 1px solid #e1e5e9;
+}
+
+.answer-item.accepted {
+    background-color: #f8fff9;
+    border: 1px solid #12994d;
+    border-radius: 8px;
+    padding: 25px;
+    margin: 0 -25px;
+}
+
+.answer-content {
+    flex: 1;
+}
+
+.answer-text {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.answer-text p {
+    margin-bottom: 15px;
+}
+
+.answer-meta {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+}
+
+.answer-form-section {
+    margin-top: 40px;
+    padding-top: 30px;
+    border-top: 2px solid #e1e5e9;
+}
+
+.answer-form-section h3 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.answer-textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 15px;
+    border: 1px solid #d6d9dc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.4;
+    resize: vertical;
+}
+
+.answer-textarea:focus {
+    outline: none;
+    border-color: #0074cc;
+}
+
+.submit-answer-btn {
+    background-color: #0a95ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 15px;
+}
+
+.submit-answer-btn:hover {
+    background-color: #0074cc;
+}
+
+/* ФОРМА ДОБАВЛЕНИЯ ВОПРОСА */
+.ask-form {
+    max-width: 800px;
+}
+
+.form-group {
+    margin-bottom: 25px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6d9dc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #0074cc;
+    box-shadow: 0 0 0 2px rgba(0, 116, 204, 0.2);
+}
+
+.form-textarea {
+    width: 100%;
+    min-height: 200px;
+    padding: 12px;
+    border: 1px solid #d6d9dc;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    line-height: 1.4;
+    resize: vertical;
+    transition: border-color 0.2s ease;
+}
+
+.form-textarea:focus {
+    outline: none;
+    border-color: #0074cc;
+    box-shadow: 0 0 0 2px rgba(0, 116, 204, 0.2);
+}
+
+.help-text {
+    font-size: 0.8rem;
+    color: #6a737c;
+    margin-top: 5px;
+}
+
+.error-message {
+    font-size: 0.8rem;
+    color: #d1383d;
+    margin-top: 5px;
+    display: none; /* По умолчанию скрыты */
+}
+
+/* Показываем ошибки для демонстрации */
+.form-group .error-message {
+    display: block; /* Для демонстрации в статической верстке */
+}
+
+.submit-btn {
+    background-color: #0a95ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0074cc;
+}
+
+/* Стили для невалидных полей */
+.form-input:invalid,
+.form-textarea:invalid {
+    border-color: #d1383d;
+}
+
+.form-input:invalid:focus,
+.form-textarea:invalid:focus {
+    border-color: #d1383d;
+    box-shadow: 0 0 0 2px rgba(209, 56, 61, 0.2);
+}
+
+/* ФОРМА АВТОРИЗАЦИИ */
+.auth-form-container {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.auth-form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.auth-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.auth-form .form-group {
+    margin-bottom: 20px;
+}
+
+.auth-form .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6d9dc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.auth-form .form-input:focus {
+    outline: none;
+    border-color: #0074cc;
+    box-shadow: 0 0 0 2px rgba(0, 116, 204, 0.2);
+}
+
+.auth-btn {
+    width: 100%;
+    background-color: #12994d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.auth-btn:hover {
+    background-color: #118443;
+}
+
+.auth-links {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e5e9;
+}
+
+.auth-link {
+    color: #0074cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.auth-link:hover {
+    text-decoration: underline;
+}
+
+/* Стили для невалидных полей в форме авторизации */
+.auth-form .form-input:invalid {
+    border-color: #d1383d;
+}
+
+.auth-form .form-input:invalid:focus {
+    border-color: #d1383d;
+    box-shadow: 0 0 0 2px rgba(209, 56, 61, 0.2);
+}
+
+/* ФОРМА РЕГИСТРАЦИИ */
+.signup-form-container {
+    max-width: 450px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.signup-form-container h2 {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.8rem;
+}
+
+.signup-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form .form-group {
+    margin-bottom: 20px;
+}
+
+.signup-form .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6d9dc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.signup-form .form-input:focus {
+    outline: none;
+    border-color: #0074cc;
+    box-shadow: 0 0 0 2px rgba(0, 116, 204, 0.2);
+}
+
+/* Стили для файлового input */
+.signup-form input[type="file"] {
+    padding: 8px;
+    border: 1px dashed #d6d9dc;
+    background-color: #f8f9fa;
+}
+
+.signup-form input[type="file"]:focus {
+    border-color: #0074cc;
+    border-style: solid;
+}
+
+.signup-btn {
+    width: 100%;
+    background-color: #0a95ff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.2s ease;
+}
+
+.signup-btn:hover {
+    background-color: #0074cc;
+}
+
+.signup-links {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e5e9;
+}
+
+.signup-link {
+    color: #0074cc;
+    text-decoration: none;
+    font-size: 0.9rem;
+}
+
+.signup-link:hover {
+    text-decoration: underline;
+}
+
+/* СТРАНИЦА НАСТРОЕК */
+.settings-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.settings-container h2 {
+    margin-bottom: 30px;
+    color: #333;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #e1e5e9;
+    padding-bottom: 10px;
+}
+
+.settings-form {
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.settings-form .form-group {
+    margin-bottom: 25px;
+}
+
+.settings-form .form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+/* Большая аватарка */
+.current-avatar {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.user-avatar-large {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #ddd;
+    border: 3px solid #12994d;
+    object-fit: cover;
+}
+
+/* Поля ввода */
+.settings-form .form-input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d6d9dc;
+    border-radius: 4px;
+    font-size: 1rem;
+    transition: border-color 0.2s ease;
+}
+
+.settings-form .form-input:focus {
+    outline: none;
+    border-color: #0074cc;
+    box-shadow: 0 0 0 2px rgba(0, 116, 204, 0.2);
+}
+
+/* Стили для файлового input */
+.settings-form input[type="file"] {
+    padding: 8px;
+    border: 1px dashed #d6d9dc;
+    background-color: #f8f9fa;
+}
+
+.settings-form input[type="file"]:focus {
+    border-color: #0074cc;
+    border-style: solid;
+}
+
+/* Стили для неизменяемых полей */
+.form-input.readonly {
+    background-color: #f8f9fa;
+    border-color: #e1e5e9;
+    color: #6a737c;
+    cursor: not-allowed;
+}
+
+.form-input.readonly:focus {
+    border-color: #e1e5e9;
+    box-shadow: none;
+}
+
+.readonly-note {
+    font-size: 0.8rem;
+    color: #d1383d;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.help-text {
+    font-size: 0.8rem;
+    color: #6a737c;
+    margin-top: 5px;
+}
+
+/* Кнопки */
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e1e5e9;
+}
+
+.form-actions .submit-btn {
+    background-color: #12994d;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-actions .submit-btn:hover {
+    background-color: #118443;
+}
+
+.form-actions .cancel-btn {
+    background-color: #6a737c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.form-actions .cancel-btn:hover {
+    background-color: #5a6268;
+}

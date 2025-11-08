@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questions - AskMeNow</title>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-container">
+            <!-- Левый блок: название сайта -->
+            <div class="header-logo">
+                <h1 class="site-title">AskMeNow</h1>
+            </div>
+
+            <!-- Центральный блок: поиск -->
+            <div class="header-search">
+                <form class="search-form">
+                    <input type="text" class="search-input" placeholder="Search...">
+                    <button type="submit" class="search-button">Search</button>
+                </form>
+            </div>
+
+            <!-- Правый блок: пользователь -->
+            <div class="header-user">
+                <button class="ask-button">Ask!</button>
+                
+                <!-- Вариант для АВТОРИЗОВАННОГО пользователя -->
+                <div class="user-profile auth-version">
+                    <img src="static/images/Avatar.svg" alt="User Avatar" class="user-avatar">
+                    <div class="user-info">
+                        <span class="user-name">Darth Vader</span>
+                        <div class="user-links">
+                            <a href="settings.html" class="user-link">Settings</a>
+                            <a href="#" class="user-link">Logout</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Вариант для НЕАВТОРИЗОВАННОГО пользователя 
+                <div class="auth-buttons guest-version">
+                    <a href="login.html" class="btn-login">Log in</a>
+                    <a href="signup.html" class="btn-signup">Sign up</a>
+                </div>
+                -->
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <div class="content-container">
+            <!-- Левая колонка (основной контент) -->
+            <div class="content-left">
+                <div class="questions-header">
+                    <div class="questions-title-section">
+                        <h2>New Questions</h2>
+                        <a href="#" class="hot-filter">Hot questions</a>
+                    </div>
+                    <button class="ask-button">Ask Question</button>
+                </div>      
+
+                <!-- Список вопросов -->
+                <div class="questions-list">
+                    
+                    <!-- Вопрос 1 -->
+                    <div class="question-item">
+                        <div class="question-stats">
+                            <div class="votes">
+                                <span class="count">15</span>
+                                <span class="label">votes</span>
+                            </div>
+                            <div class="answers accepted">
+                                <span class="count">8</span>
+                                <span class="label">answers</span>
+                            </div>
+                            <div class="views">
+                                <span class="count">124</span>
+                                <span class="label">views</span>
+                            </div>
+                        </div>
+                        
+                        <div class="question-content">
+                            <h3 class="question-title">
+                                <a href="question.html">How to center a div with CSS?</a>
+                            </h3>
+                            <p class="question-excerpt">I've been trying to center a div both horizontally and vertically but nothing seems to work. I've tried display: flex, position: absolute, and transform methods...</p>
+                            
+                            <div class="question-meta">
+                                <div class="question-tags">
+                                    <a href="#" class="tag tag-s">HTML</a>
+                                    <a href="#" class="tag tag-s">CSS</a>
+                                    <a href="#" class="tag tag-s">Flexbox</a>
+                                </div>
+                                <div class="question-author">
+                                    <img src="static/images/Avatar.svg" alt="User Avatar" class="author-avatar">
+                                    <span class="author-name">John Doe</span>
+                                    <span class="question-date">asked 2 hours ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 2 -->
+                    <div class="question-item">
+                        <div class="question-stats">
+                            <div class="votes">
+                                <span class="count">42</span>
+                                <span class="label">votes</span>
+                            </div>
+                            <div class="answers accepted">
+                                <span class="count">15</span>
+                                <span class="label">answers</span>
+                            </div>
+                            <div class="views">
+                                <span class="count">356</span>
+                                <span class="label">views</span>
+                            </div>
+                        </div>
+                        
+                        <div class="question-content">
+                            <h3 class="question-title">
+                                <a href="question.html">What is the difference between let and var in JavaScript?</a>
+                            </h3>
+                            <p class="question-excerpt">I'm learning JavaScript and confused about when to use let vs var. Can someone explain the key differences with examples?</p>
+                            
+                            <div class="question-meta">
+                                <div class="question-tags">
+                                    <a href="#" class="tag tag-m">JavaScript</a>
+                                    <a href="#" class="tag tag-s">ES6</a>
+                                    <a href="#" class="tag tag-s">Variables</a>
+                                </div>
+                                <div class="question-author">
+                                    <img src="static/images/Avatar.svg" alt="User Avatar" class="author-avatar">
+                                    <span class="author-name">Sarah Smith</span>
+                                    <span class="question-date">asked 1 day ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Вопрос 3 -->
+                    <div class="question-item">
+                        <div class="question-stats">
+                            <div class="votes">
+                                <span class="count">3</span>
+                                <span class="label">votes</span>
+                            </div>
+                            <div class="answers">
+                                <span class="count">0</span>
+                                <span class="label">answers</span>
+                            </div>
+                            <div class="views">
+                                <span class="count">45</span>
+                                <span class="label">views</span>
+                            </div>
+                        </div>
+                        
+                        <div class="question-content">
+                            <h3 class="question-title">
+                                <a href="question.html">Django model relationships - ForeignKey vs OneToOneField</a>
+                            </h3>
+                            <p class="question-excerpt">When should I use ForeignKey and when should I use OneToOneField in Django models? What are the performance implications?</p>
+                            
+                            <div class="question-meta">
+                                <div class="question-tags">
+                                    <a href="#" class="tag tag-l">Python</a>
+                                    <a href="#" class="tag tag-m">Django</a>
+                                    <a href="#" class="tag tag-s">Database</a>
+                                </div>
+                                <div class="question-author">
+                                    <img src="static/images/Avatar.svg" alt="User Avatar" class="author-avatar">
+                                    <span class="author-name">Mike Johnson</span>
+                                    <span class="question-date">asked 3 days ago</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Пагинатор -->
+                <div class="pagination">
+                    <a href="#" class="page-link prev">Previous</a>
+                    <a href="#" class="page-link active">1</a>
+                    <a href="#" class="page-link">2</a>
+                    <a href="#" class="page-link">3</a>
+                    <a href="#" class="page-link">4</a>
+                    <a href="#" class="page-link">5</a>
+                    <span class="page-link dots">...</span>
+                    <a href="#" class="page-link">25</a>
+                    <a href="#" class="page-link next">Next</a>
+                </div>
+            </div>
+
+            <!-- Правая колонка (сайдбар) -->
+            <div class="content-sidebar">
+                <!-- Блок популярных тегов -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">Popular Tags</h3>
+                    <div class="tags-container">
+                        <a href="#" class="tag tag-xl">JavaScript</a>
+                        <a href="#" class="tag tag-l">Python</a>
+                        <a href="#" class="tag tag-l">Java</a>
+                        <a href="#" class="tag tag-m">HTML</a>
+                        <a href="#" class="tag tag-m">CSS</a>
+                        <a href="#" class="tag tag-m">React</a>
+                        <a href="#" class="tag tag-m">Node.js</a>
+                        <a href="#" class="tag tag-s">Vue</a>
+                        <a href="#" class="tag tag-s">Angular</a>
+                        <a href="#" class="tag tag-s">TypeScript</a>
+                        <a href="#" class="tag tag-s">PHP</a>
+                        <a href="#" class="tag tag-xs">Ruby</a>
+                        <a href="#" class="tag tag-xs">Go</a>
+                        <a href="#" class="tag tag-xs">Rust</a>
+                        <a href="#" class="tag tag-xs">Swift</a>
+                        <a href="#" class="tag tag-xs">Kotlin</a>
+                        <a href="#" class="tag tag-xs">C++</a>
+                        <a href="#" class="tag tag-xs">C#</a>
+                        <a href="#" class="tag tag-xs">Scala</a>
+                        <a href="#" class="tag tag-xs">SQL</a>
+                    </div>
+                </div>
+
+                <!-- Блок лучших участников -->
+                <div class="sidebar-block">
+                    <h3 class="sidebar-title">Best Members</h3>
+                    <div class="members-list">
+                        <a href="#" class="member-link">Linus Torvalds</a>
+                        <a href="#" class="member-link">Guido van Rossum</a>
+                        <a href="#" class="member-link">Brendan Eich</a>
+                        <a href="#" class="member-link">Grace Hopper</a>
+                        <a href="#" class="member-link">Tim Berners-Lee</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="footer-content">
+            Danil Abdullin 2025
+        </div>
+    </footer>
+</body>
+</html>
