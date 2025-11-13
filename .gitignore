@@ -10,6 +10,7 @@ env/
 venv/
 .venv/
 .env
+askmenow/prod.conf
 
 # IDE
 .vscode/
