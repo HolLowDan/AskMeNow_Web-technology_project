@@ -12,7 +12,9 @@
         <div class="header-container">
             <!-- Левый блок: название сайта -->
             <div class="header-logo">
-                <h1 class="site-title">AskMeNow</h1>
+                <a href="index.html" class="logo-link">
+                    <h1 class="site-title">AskMeNow</h1>
+                </a>
             </div>
 
             <!-- Центральный блок: поиск -->
@@ -61,10 +63,22 @@
                 <div class="question-detail">
                     <div class="question-main">
                         <!-- Блок голосования вопроса -->
-                        <div class="vote-section">
-                            <button class="vote-btn upvote">↑</button>
-                            <span class="vote-count">15</span>
-                            <button class="vote-btn downvote">↓</button>
+                        <div class="vote-panel">
+                            <button class="vote-btn upvote" title="This question is useful">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M2 25h32L18 9 2 25Z"/>
+                                </svg>
+                            </button>
+                            <div class="vote-count">15</div>
+                            <button class="vote-btn downvote" title="This question is not useful">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M2 11h32L18 27 2 11Z"/>
+                                </svg>
+                            </button>
+                            <div class="vote-actions">
+                                <button class="bookmark-btn" title="Bookmark this question">★</button>
+                                <button class="share-btn" title="Share this question">↗</button>
+                            </div>
                         </div>
 
                         <!-- Контент вопроса -->
@@ -113,11 +127,19 @@
                     
                     <!-- Ответ 1 (принятый) -->
                     <div class="answer-item accepted">
-                        <div class="vote-section">
-                            <button class="vote-btn upvote">↑</button>
-                            <span class="vote-count">42</span>
-                            <button class="vote-btn downvote">↓</button>
-                            <div class="accepted-check">✓</div>
+                        <div class="vote-panel">
+                            <button class="vote-btn upvote" title="This answer is useful">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M2 25h32L18 9 2 25Z"/>
+                                </svg>
+                            </button>
+                            <div class="vote-count">42</div>
+                            <button class="vote-btn downvote" title="This answer is not useful">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M2 11h32L18 27 2 11Z"/>
+                                </svg>
+                            </button>
+                            <div class="accepted-check" title="Accepted answer">✓</div>
                         </div>
 
                         <div class="answer-content">
@@ -141,10 +163,18 @@
 
                     <!-- Ответ 2 -->
                     <div class="answer-item">
-                        <div class="vote-section">
-                            <button class="vote-btn upvote">↑</button>
-                            <span class="vote-count">8</span>
-                            <button class="vote-btn downvote">↓</button>
+                        <div class="vote-panel">
+                            <button class="vote-btn upvote" title="This answer is useful">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M2 25h32L18 9 2 25Z"/>
+                                </svg>
+                            </button>
+                            <div class="vote-count">8</div>
+                            <button class="vote-btn downvote" title="This answer is not useful">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M2 11h32L18 27 2 11Z"/>
+                                </svg>
+                            </button>
                         </div>
 
                         <div class="answer-content">
@@ -168,10 +198,18 @@
 
                     <!-- Ответ 3 -->
                     <div class="answer-item">
-                        <div class="vote-section">
-                            <button class="vote-btn upvote">↑</button>
-                            <span class="vote-count">2</span>
-                            <button class="vote-btn downvote">↓</button>
+                        <div class="vote-panel">
+                            <button class="vote-btn upvote" title="This answer is useful">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M2 25h32L18 9 2 25Z"/>
+                                </svg>
+                            </button>
+                            <div class="vote-count">2</div>
+                            <button class="vote-btn downvote" title="This answer is not useful">
+                                <svg width="36" height="36" viewBox="0 0 36 36" fill="currentColor">
+                                    <path d="M2 11h32L18 27 2 11Z"/>
+                                </svg>
+                            </button>
                         </div>
 
                         <div class="answer-content">

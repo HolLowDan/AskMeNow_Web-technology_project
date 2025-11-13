@@ -41,6 +41,16 @@ body {
     font-weight: bold;
 }
 
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.logo-link:hover {
+    text-decoration: none;
+}
+
 /* Центральный блок: поиск */
 .header-search {
     flex: 1;
@@ -344,53 +354,6 @@ body {
     background-color: #f8f9fa;
 }
 
-/* Статистика вопроса */
-.question-stats {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    min-width: 80px;
-    flex-shrink: 0;
-}
-
-.votes, .answers, .views {
-    text-align: center;
-    padding: 5px 8px;
-    border-radius: 4px;
-}
-
-.votes .count, .views .count {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #6a737c;
-}
-
-.answers .count {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.votes .label, .answers .label, .views .label {
-    font-size: 0.8rem;
-    color: #6a737c;
-}
-
-/* Стили для ответов */
-.answers {
-    border: 1px solid #e1e5e9;
-}
-
-.answers.accepted {
-    border-color: #12994d;
-    background-color: #12994d;
-}
-
-.answers.accepted .count,
-.answers.accepted .label {
-    color: white;
-}
-
 /* Контент вопроса */
 .question-content {
     flex: 1;
@@ -526,37 +489,6 @@ body {
 .question-main {
     display: flex;
     gap: 20px;
-}
-
-.vote-section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 8px;
-    min-width: 60px;
-    flex-shrink: 0;
-}
-
-.vote-btn {
-    background: none;
-    border: 1px solid #d6d9dc;
-    border-radius: 4px;
-    padding: 8px 12px;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #6a737c;
-    transition: all 0.2s ease;
-}
-
-.vote-btn:hover {
-    background-color: #f8f9fa;
-    color: #3c4146;
-}
-
-.vote-count {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #6a737c;
 }
 
 .accepted-check {
@@ -780,6 +712,23 @@ body {
     color: #d1383d;
     margin-top: 5px;
     display: none; /* По умолчанию скрыты */
+}
+
+/* Показывать ошибки только при невалидных полях */
+.form-input:invalid + .error-message,
+.form-textarea:invalid + .error-message {
+    display: block;
+}
+
+/* Стили для обязательных полей */
+.form-input:required,
+.form-textarea:required {
+    border-left: 3px solid #0a95ff;
+}
+
+.form-input:required:invalid,
+.form-textarea:required:invalid {
+    border-left-color: #d1383d;
 }
 
 /* Показываем ошибки для демонстрации */
@@ -1127,4 +1076,199 @@ body {
 
 .form-actions .cancel-btn:hover {
     background-color: #5a6268;
+}
+
+/* СТИЛИ ДЛЯ ГОЛОСОВАНИЯ */
+
+/* Блок статистики вопроса в списке */
+.question-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 8px;
+    min-width: 80px;
+    flex-shrink: 0;
+    padding: 8px;
+    background: #f8f9fa;
+    border-radius: 4px;
+}
+
+.votes-section, .answers-section, .views-section {
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 3px;
+    min-width: 60px;
+}
+
+.votes-section {
+    border: 1px solid #e1e5e9;
+    background: white;
+}
+
+.answers-section {
+    border: 1px solid #e1e5e9;
+    background: white;
+}
+
+.answers-section.accepted {
+    border-color: #12994d;
+    background-color: #12994d;
+    color: white;
+}
+
+.views-section {
+    background: #f1f2f3;
+    color: #6a737c;
+}
+
+.vote-count, .answer-count, .view-count {
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.votes-section .vote-count {
+    color: #0c0d0e;
+}
+
+.answers-section .answer-count {
+    color: inherit;
+}
+
+.answers-section.accepted .answer-count {
+    color: white;
+}
+
+.views-section .view-count {
+    color: #6a737c;
+}
+
+.vote-label, .answer-label, .view-label {
+    font-size: 0.75rem;
+    color: #6a737c;
+    text-transform: lowercase;
+}
+
+.answers-section.accepted .answer-label {
+    color: white;
+}
+
+/* Панель голосования для страницы вопроса */
+.vote-panel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    min-width: 40px;
+    flex-shrink: 0;
+    padding: 8px 4px;
+}
+
+.vote-btn {
+    background: none;
+    border: none;
+    cursor: default;
+    color: #babfc4;
+    padding: 8px;
+    border-radius: 4px;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+}
+
+.vote-btn:hover {
+    background-color: #f8f9fa;
+    color: #3c4146;
+}
+
+.vote-btn.upvote:hover {
+    color: #12994d;
+}
+
+.vote-btn.downvote:hover {
+    color: #d1383d;
+}
+
+.vote-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.vote-count {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #6a737c;
+    padding: 4px 0;
+    min-width: 40px;
+    text-align: center;
+}
+
+/* Дополнительные действия */
+.vote-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-top: 8px;
+    padding-top: 8px;
+    border-top: 1px solid #e1e5e9;
+}
+
+.bookmark-btn, .share-btn {
+    background: none;
+    border: none;
+    cursor: default;
+    color: #6a737c;
+    padding: 6px;
+    border-radius: 3px;
+    font-size: 1rem;
+    transition: all 0.2s ease;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bookmark-btn:hover, .share-btn:hover {
+    background-color: #f8f9fa;
+    color: #3c4146;
+}
+
+.bookmark-btn:hover {
+    color: #f48024;
+}
+
+/* Принятый ответ */
+.answer-item.accepted .vote-panel {
+    position: relative;
+}
+
+.answer-item.accepted .vote-panel::before {
+    content: '';
+    position: absolute;
+    left: -8px;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: #12994d;
+    border-radius: 2px;
+}
+
+.accepted-check {
+    color: #12994d;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 8px;
+    padding: 4px;
+    border-radius: 50%;
+    background: #f8fff9;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #12994d;
 }
